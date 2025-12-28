@@ -78,40 +78,23 @@
   </section>
 
   <section id="contact" class="section">
-  <div class="container">
-    <h2>Επικοινωνία</h2>
+    <div class="container">
+      <h2>Επικοινωνία</h2>
+      <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label><input name="bot-field"></label></p>
 
-    <form
-      id="contactForm"
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      netlify
-      netlify-honeypot="bot-field"
-      action="/success.html"
-    >
-      <!-- Required for Netlify -->
-      <input type="hidden" name="form-name" value="contact">
+        <label>Όνομα</label>
+        <input type="text" name="name" required>
 
-      <!-- Honeypot (spam protection) -->
-      <div hidden>
-        <label>
-          Don’t fill this out:
-          <input name="bot-field">
-        </label>
-      </div>
+        <label>Email</label>
+        <input type="email" name="email" required>
 
-      <label for="name">Όνομα</label>
-      <input type="text" id="name" name="name" required>
+        <label>Τηλέφωνο</label>
+        <input type="tel" name="phone">
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="phone">Τηλέφωνο</label>
-      <input type="tel" id="phone" name="phone">
-
-      <label for="message">Μήνυμα</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+        <label>Μήνυμα</label>
+        <textarea name="message" rows="5" required></textarea>
 
       <button type="submit">Αποστολή</button>
     </form>
