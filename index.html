@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daffy’s Van Bar</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <!-- Λογότυπο εικόνα -->
+    <img src="images/logo.png" alt="Daffy’s Van Bar Logo" class="logo">
+    <nav>
+      <a href="#features">Υπηρεσίες</a>
+      <a href="#about">Σχετικά</a>
+      <a href="#contact">Επικοινωνία</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Daffy’s Van Bar</h1>
+      <p>Mobile cocktail bar για εκδηλώσεις, πάρτι, γάμους & εταιρικά events. Εσύ επιλέγεις τον χώρο — εμείς φέρνουμε την εμπειρία.</p>
+      <a href="#contact" class="btn">Ζήτα προσφορά</a>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2>Υπηρεσίες</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Events</h3>
+          <p>Το Daffy’s Van Bar υποστηρίζει κάθε είδους εκδήλωση — από μικρά private parties μέχρι μεγάλα corporate events και γάμους. Ερχόμαστε έτοιμοι, στήνουμε πλήρες bar setup και αναλαμβάνουμε όλη την cocktail εμπειρία. 
+</p>
+        </div>
+        <div class="card">
+          <h3>Τι προσφέρουμε</h3>
+          <ul>
+            <li>Ιδιωτικά πάρτι & γενέθλια</li>
+            <li>Γάμους & pre-wedding events</li>
+            <li>Bachelor / Bachelorette</li>
+            <li>Εταιρικά events</li>
+            <li>Custom cocktail menu</li>
+            <li>Πλήρες bar setup & bartenders</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Επικοινωνία</h3>
+          <p>
+            📞 +30 698 000 0000<br>
+            📧 vanbarconcept@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>Σχετικά με εμάς</h2>
+      <p>
+        Το βανάκι μας είναι ένα πλήρως εξοπλισμένο mobile bar που προσφέρει ολοκληρωμένες υπηρεσίες catering για κάθε είδους εκδήλωση. Από γάμους και βαπτίσεις έως εταιρικά events και ιδιωτικά πάρτι, μεταφέρουμε μια ολοκληρωμένη cocktail εμπειρία απευθείας στον χώρο σας.  Με επαγγελματικό εξοπλισμό, γρήγορη προετοιμασία και άψογο service, προσφέρουμε cocktails, signature drinks και ποιοτικά ποτά μέσα από ένα εντυπωσιακό και στιλάτο van που δίνει χαρακτήρα σε κάθε event.  Στόχος μας είναι να μετατρέψουμε την εκδήλωσή σας σε μια μοναδική, ευχάριστη και αξέχαστη εμπειρία..
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+  <div class="container">
+    <h2>Επικοινωνία</h2>
+
+    <form
+      id="contactForm"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify
+      netlify-honeypot="bot-field"
+      action="/success.html"
+    >
+      <!-- Required for Netlify -->
+      <input type="hidden" name="form-name" value="contact">
+
+      <!-- Honeypot (spam protection) -->
+      <div hidden>
+        <label>
+          Don’t fill this out:
+          <input name="bot-field">
+        </label>
+      </div>
+
+      <label for="name">Όνομα</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Τηλέφωνο</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="message">Μήνυμα</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Αποστολή</button>
+    </form>
+
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <div class="container">
+    <small>© <span id="year"></span> Daffy’s Van Bar. All rights reserved.</small>
+  </div>
+</footer>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

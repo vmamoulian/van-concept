@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ευχαριστούμε — Daffy’s Van Bar</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f7f7f7;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      max-width: 450px;
+
+      /* fade-in */
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #ff8b17;
+    }
+
+    .card p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #ff8b17;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="successCard">
+    <h1>Ευχαριστούμε!</h1>
+    <p>Το μήνυμά σας στάλθηκε επιτυχώς.<br>Θα επικοινωνήσουμε σύντομα μαζί σας.</p>
+    <a href="index.html">Επιστροφή στην αρχική</a>
+  </div>
+
+  <script>
+    // fade-in effect
+    document.addEventListener('DOMContentLoaded', () => {
+      const card = document.getElementById('successCard');
+      setTimeout(() => {
+        card.classList.add('visible');
+      }, 100); // μικρή καθυστέρηση για καλύτερο effect
+    });
+  </script>
+
+</body>
+</html>
