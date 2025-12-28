@@ -43,8 +43,7 @@
       <div class="grid">
         <div class="card">
           <h3>Events</h3>
-          <p>Το Daffy’s Van Bar υποστηρίζει κάθε είδους εκδήλωση — από μικρά private parties μέχρι μεγάλα corporate events και γάμους. Ερχόμαστε έτοιμοι, στήνουμε πλήρες bar setup και αναλαμβάνουμε όλη την cocktail εμπειρία. 
-</p>
+          <p>Το Daffy’s Van Bar υποστηρίζει κάθε είδους εκδήλωση — από μικρά private parties μέχρι μεγάλα corporate events και γάμους. Ερχόμαστε έτοιμοι, στήνουμε πλήρες bar setup και αναλαμβάνουμε όλη την cocktail εμπειρία.</p>
         </div>
         <div class="card">
           <h3>Τι προσφέρουμε</h3>
@@ -72,7 +71,7 @@
     <div class="container">
       <h2>Σχετικά με εμάς</h2>
       <p>
-        Το βανάκι μας είναι ένα πλήρως εξοπλισμένο mobile bar που προσφέρει ολοκληρωμένες υπηρεσίες catering για κάθε είδους εκδήλωση. Από γάμους και βαπτίσεις έως εταιρικά events και ιδιωτικά πάρτι, μεταφέρουμε μια ολοκληρωμένη cocktail εμπειρία απευθείας στον χώρο σας.  Με επαγγελματικό εξοπλισμό, γρήγορη προετοιμασία και άψογο service, προσφέρουμε cocktails, signature drinks και ποιοτικά ποτά μέσα από ένα εντυπωσιακό και στιλάτο van που δίνει χαρακτήρα σε κάθε event.  Στόχος μας είναι να μετατρέψουμε την εκδήλωσή σας σε μια μοναδική, ευχάριστη και αξέχαστη εμπειρία..
+        Το βανάκι μας είναι ένα πλήρως εξοπλισμένο mobile bar που προσφέρει ολοκληρωμένες υπηρεσίες catering για κάθε είδους εκδήλωση. Από γάμους και βαπτίσεις έως εταιρικά events και ιδιωτικά πάρτι, μεταφέρουμε μια ολοκληρωμένη cocktail εμπειρία απευθείας στον χώρο σας. Με επαγγελματικό εξοπλισμό, γρήγορη προετοιμασία και άψογο service, προσφέρουμε cocktails, signature drinks και ποιοτικά ποτά μέσα από ένα εντυπωσιακό και στιλάτο van που δίνει χαρακτήρα σε κάθε event. Στόχος μας είναι να μετατρέψουμε την εκδήλωσή σας σε μια μοναδική, ευχάριστη και αξέχαστη εμπειρία.
       </p>
     </div>
   </section>
@@ -80,27 +79,26 @@
   <section id="contact" class="section">
     <div class="container">
       <h2>Επικοινωνία</h2>
-      <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
+      <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="success.html">
         <input type="hidden" name="form-name" value="contact">
         <p hidden><label><input name="bot-field"></label></p>
 
-        <label>Όνομα</label>
-        <input type="text" name="name" required>
+        <label for="name">Όνομα</label>
+        <input type="text" id="name" name="name" required>
 
-        <label>Email</label>
-        <input type="email" name="email" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-        <label>Τηλέφωνο</label>
-        <input type="tel" name="phone">
+        <label for="phone">Τηλέφωνο</label>
+        <input type="tel" id="phone" name="phone">
 
-        <label>Μήνυμα</label>
-        <textarea name="message" rows="5" required></textarea>
+        <label for="message">Μήνυμα</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">Αποστολή</button>
-    </form>
-
-  </div>
-</section>
+        <button type="submit">Αποστολή</button>
+      </form>
+    </div>
+  </section>
 
 
 </main>
