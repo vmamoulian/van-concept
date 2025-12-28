@@ -1,0 +1,284 @@
+/* ----------------------------
+   Funky Daffy's — Complete CSS
+   ---------------------------- */
+
+/* ---------- Variables & Base ---------- */
+:root {
+  --bg: #f7f7f7;
+  --surface: #ffffff;
+  --text: #222;
+  --accent1: #ff8b17;
+  --accent2: #ffd166;
+  --muted: #666;
+  --radius-lg: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+/* ---------- Container ---------- */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: #000;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+/* Προσθήκη στυλ για το λογότυπο στο header */
+header .logo {
+  height: 80px; /* Αυξήστε το ύψος για να γίνει πιο μεγάλο */
+  width: auto;  /* Διατηρήστε την αναλογία της εικόνας */
+  display: block;
+  margin-right: 20px; /* Κενό δεξιά αν θέλεις */
+}
+
+/* Βεβαιωθείτε ότι το λογότυπο είναι responsive για μικρές οθόνες */
+@media (max-width: 768px) {
+  header .logo {
+    height: 60px; /* Μειώστε το μέγεθος στο κινητό αν χρειάζεται */
+  }
+}
+
+/* ---------- Navigation ---------- */
+nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff8b17;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+nav a:hover {
+  color: #ff8b17;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Header on scroll ---------- */
+header.scrolled {
+  background: #ff8b17;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+header.scrolled nav a {
+  color: #000;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #fff;
+  background: url("hero.png") center/cover no-repeat;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* ---------- Sections ---------- */
+section {
+  padding: 80px 0;
+  background: var(--surface);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent1);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ---------- Grid & Cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--surface);
+  padding: 30px 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  color: #fff;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.card li {
+  margin-bottom: 6px;
+}
+
+/* ---------- Contact Form ---------- */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: var(--surface);
+  padding: 30px 25px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent1);
+  box-shadow: 0 0 8px rgba(255,139,23,0.3);
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent1);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 14px;
+  background: #222;
+  color: #fff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.4rem; }
+  .hero p { font-size: 1rem; }
+  .grid { grid-template-columns: 1fr; }
+}
